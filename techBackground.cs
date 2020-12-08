@@ -74,16 +74,6 @@ namespace Mnemonic_keys
             Application.Exit();
         }
 
-        private void techBackground_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

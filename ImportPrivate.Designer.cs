@@ -107,7 +107,7 @@
             this.button1.Location = new System.Drawing.Point(433, 212);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 80);
+            this.button1.Size = new System.Drawing.Size(90, 80);
             this.button1.TabIndex = 19;
             this.button1.Text = "↓";
             this.button1.UseVisualStyleBackColor = true;
@@ -194,7 +194,6 @@
             this.helpStripMenuItem.Name = "helpStripMenuItem";
             this.helpStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpStripMenuItem.Text = "Help";
-
             // 
             // aboutThisSoftware
             // 
@@ -202,7 +201,6 @@
             this.aboutThisSoftware.Size = new System.Drawing.Size(190, 22);
             this.aboutThisSoftware.Text = "About this software";
             this.aboutThisSoftware.Click += new System.EventHandler(this.aboutThisSoftware_Click);
-
             // 
             // techBackground
             // 
@@ -210,7 +208,6 @@
             this.techBackground.Size = new System.Drawing.Size(190, 22);
             this.techBackground.Text = "Technical background";
             this.techBackground.Click += new System.EventHandler(this.helpStripMenuItem_Click);
-
             // 
             // ImportPrivate
             // 

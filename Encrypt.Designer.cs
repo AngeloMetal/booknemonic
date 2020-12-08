@@ -48,7 +48,6 @@ namespace Booknemonic
             this.messagebox.Size = new System.Drawing.Size(513, 204);
             this.messagebox.TabIndex = 0;
             this.messagebox.Text = "";
-            this.messagebox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label1
             // 
@@ -100,7 +99,7 @@ namespace Booknemonic
             this.encryptbutton.TabIndex = 6;
             this.encryptbutton.Text = "Encrypt";
             this.encryptbutton.UseVisualStyleBackColor = true;
-            this.encryptbutton.Click += new System.EventHandler(this.button1_Click);
+            this.encryptbutton.Click += new System.EventHandler(this.encryptbutton_Click);
             // 
             // decryptbutton
             // 
@@ -139,9 +138,9 @@ namespace Booknemonic
             this.Controls.Add(this.label1);
             this.Controls.Add(this.messagebox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Encrypt";
             this.Text = "Encrypt/Decrypt a message";
-            this.Load += new System.EventHandler(this.Encrypt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

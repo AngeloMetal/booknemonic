@@ -85,7 +85,6 @@
             this.label3.Size = new System.Drawing.Size(57, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Signature";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // message_box
             // 
@@ -186,9 +185,9 @@
             this.Controls.Add(this.signmessage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
             this.Name = "Sign";
             this.Text = "Sign/Verify a message";
-            this.Load += new System.EventHandler(this.Encrypt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

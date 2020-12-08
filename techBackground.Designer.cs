@@ -169,7 +169,6 @@ namespace Mnemonic_keys
             this.label4.Size = new System.Drawing.Size(155, 25);
             this.label4.TabIndex = 25;
             this.label4.Text = "1390                 ➝";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -243,9 +242,9 @@ namespace Mnemonic_keys
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "techBackground";
             this.Text = "How does this software works";
-            this.Load += new System.EventHandler(this.techBackground_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -78,7 +78,6 @@
     </Compile>
     <Compile Update="Program.cs" />
     <Compile Update="Properties\AssemblyInfo.cs" />
-    <Compile Update="Sha3Keccack.cs" />
     <EmbeddedResource Update="Sign.resx">
       <DependentUpon>Sign.cs</DependentUpon>
     </EmbeddedResource>

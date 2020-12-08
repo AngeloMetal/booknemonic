@@ -20,11 +20,6 @@ namespace Booknemonic
             InitializeComponent();
         }
 
-        private void aboutThis_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void importAPrivateMnemonicToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ImportPrivate form = new ImportPrivate();

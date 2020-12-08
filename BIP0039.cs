@@ -3,16 +3,18 @@
 // Distributed under the MIT software license, see the accompanying
 // file LICENCE or http://www.opensource.org/licenses/mit-license.php.
 
+using Autarkysoft.Bitcoin;
 using Autarkysoft.Bitcoin.Cryptography;
 using Autarkysoft.Bitcoin.Cryptography.Hashing;
 using Autarkysoft.Bitcoin.Cryptography.KeyDerivationFunctions;
+using Autarkysoft.Bitcoin.ImprovementProposals;
 using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Autarkysoft.Bitcoin.ImprovementProposals
+namespace Booknemonic
 {
     /// <summary>
     /// Mnemonic code for generating deterministic keys. Inherits from <see cref="BIP0032"/>.
@@ -302,33 +304,7 @@ namespace Autarkysoft.Bitcoin.ImprovementProposals
         /// <returns>An array of 2048 strings</returns>
         public static string[] GetAllWords(WordLists wl)
         {
-            if (!Enum.IsDefined(typeof(WordLists), wl))
-                throw new ArgumentException("Given word list is not defined.");
-
-            string path = @"C:\Users\bymet\source\repos\Mnemonic keys\Mnemonic keys\BIP0039WordLists\English.txt";
-
-            Assembly asm = Assembly.GetExecutingAssembly();
-            using Stream stream = asm.GetManifestResourceStream(path);
-            if (stream != null)
-            {
-                using StreamReader reader = new StreamReader(stream);
-                int i = 0;
-                string[] result = new string[2048];
-                while (!reader.EndOfStream)
-                {
-                    result[i++] = reader.ReadLine();
-                }
-                if (i != 2048)
-                {
-                    throw new ArgumentException("There is something wrong with the embeded word list.");
-                }
-
-                return result;
-            }
-            else
-            {
-                throw new ArgumentException("Word list was not found.");
-            }
+            return Autarkysoft.Bitcoin.ImprovementProposals.BIP0039.GetAllWords(Autarkysoft.Bitcoin.ImprovementProposals.BIP0039.WordLists.English);
         }
 
 

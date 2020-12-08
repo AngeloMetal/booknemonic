@@ -202,9 +202,9 @@ namespace Booknemonic
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "aboutThis";
             this.Text = "About this software";
-            this.Load += new System.EventHandler(this.aboutThis_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
