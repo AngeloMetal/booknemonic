@@ -17,19 +17,41 @@ using Autarkysoft.Bitcoin.ImprovementProposals;
 using Autarkysoft.Bitcoin;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Runtime.InteropServices;
+
+
 
 namespace Booknemonic
 {
     public partial class Encrypt : Form
     {
+        [DllImport("user32")]
+        private extern static int GetCaretPos(out Point p);
+
         public Encrypt()
         {
             InitializeComponent();
         }
 
-
+        //Encrypts the message
         private void encryptbutton_Click(object sender, EventArgs e)
         {
+            //it gets rid of any useless spaces of the mnemonicbox
+            while (mnemonicbox.Text.Substring(mnemonicbox.Text.Length - 1) == " ")
+            {
+                mnemonicbox.Text = mnemonicbox.Text.Remove(mnemonicbox.Text.Length - 1, 1);
+            }
+
+            while (mnemonicbox.Text.Substring(0, 1) == " ")
+            {
+                mnemonicbox.Text = mnemonicbox.Text.Substring(1);
+            }
+
+            while (mnemonicbox.Text.Contains("  "))
+            {
+                mnemonicbox.Text = mnemonicbox.Text.Replace("  ", " ");
+            }
+
             try
             {
                 if (mnemonicbox.Text.Split(" ").Length != 24)
@@ -74,7 +96,7 @@ namespace Booknemonic
 
         }
 
-
+        //It converts words to hexadecimal
         public string MnToHex(string mnemonic)
         {
             if (string.IsNullOrWhiteSpace(mnemonic))
@@ -133,12 +155,23 @@ namespace Booknemonic
         }
 
 
+
         private void pasteButton_Click(object sender, EventArgs e)
         {
             if (Clipboard.GetText() != null)
             {
                 mnemonicbox.Text = Clipboard.GetText();
             }
+        }
+
+
+        private void mnemonicbox_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void mnemonicbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
         }
     }
 }

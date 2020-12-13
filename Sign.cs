@@ -30,6 +30,23 @@ namespace Mnemonic_keys
       
         private void button1_Click(object sender, EventArgs e)
         {
+            //it gets rid of any useless spaces of the mnemonicTextbox
+            while(mnemonicTextbox.Text.Substring(mnemonicTextbox.Text.Length - 1) == " ")
+            {
+                mnemonicTextbox.Text = mnemonicTextbox.Text.Remove(mnemonicTextbox.Text.Length - 1, 1);
+            }
+
+            while (mnemonicTextbox.Text.Substring(0, 1) == " ")
+            {
+                mnemonicTextbox.Text = mnemonicTextbox.Text.Substring(1);
+            }
+
+            while(mnemonicTextbox.Text.Contains("  "))
+            {
+                mnemonicTextbox.Text = mnemonicTextbox.Text.Replace("  ", " ");
+            }
+            
+
             try
             {
                 if (mnemonicTextbox.Text.Split(" ").Length != 12)

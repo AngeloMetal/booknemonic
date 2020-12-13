@@ -60,10 +60,19 @@ namespace Booknemonic
             // 
             // mnemonicbox
             // 
+            this.mnemonicbox.AutoCompleteCustomSource.AddRange(new string[] {
+            "test1",
+            "test2",
+            "test3"});
+            this.mnemonicbox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.mnemonicbox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.mnemonicbox.Location = new System.Drawing.Point(76, 240);
             this.mnemonicbox.Name = "mnemonicbox";
+            this.mnemonicbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mnemonicbox.Size = new System.Drawing.Size(513, 23);
             this.mnemonicbox.TabIndex = 2;
+            this.mnemonicbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mnemonicbox_KeyPress);
+            this.mnemonicbox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.mnemonicbox_KeyUp);
             // 
             // label2
             // 

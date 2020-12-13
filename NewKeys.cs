@@ -24,6 +24,7 @@ namespace Booknemonic
 {
     public partial class NewKeys : Form
     {
+        //This form is the main form of the software.
         public NewKeys()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Booknemonic
 
         }
 
+        //Generate private and public words
         public void createNewMnemonic()
         {
             Mnemonic private_mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
@@ -47,7 +49,9 @@ namespace Booknemonic
 
         }
 
+        //It converts any hexadecimal to mnemonic (words)
 #pragma warning disable CS0436 // Type conflicts with imported type
+
         public string HexToMn(string hex)
 #pragma warning restore CS0436 // Type conflicts with imported type
         {
@@ -121,14 +125,20 @@ namespace Booknemonic
         {
             Sign form = new Sign();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
 
         private void encryptDecryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Encrypt form = new Encrypt();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
 
         }
 
@@ -187,6 +197,7 @@ namespace Booknemonic
             Clipboard.SetText(textBox2.Text);
         }
 
+        //Save words on a text file
         private void saveas_Click(object sender, EventArgs e)
         {
             string textContent = "----- PRIVATE WORDS -----\n" + textBox1.Text + "\n" + "-------------------------\n\n----- PUBLIC WORDS -----\n" + textBox2.Text + "\n-------------------------";
@@ -197,6 +208,7 @@ namespace Booknemonic
             saveFileDialog1.CheckFileExists = false;
             saveFileDialog1.CheckPathExists = true;
             saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.FileName = "words";
             saveFileDialog1.Filter = "Text files only (*.txt)|*.txt";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;

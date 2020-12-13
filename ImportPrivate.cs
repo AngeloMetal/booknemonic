@@ -25,6 +25,22 @@ namespace Booknemonic
 
         public void ImportPrivateMnemonic()
         {
+            //it gets rid of any useless spaces of the textBox1
+            while (textBox1.Text.Substring(textBox1.Text.Length - 1) == " ")
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+
+            while (textBox1.Text.Substring(0, 1) == " ")
+            {
+                textBox1.Text = textBox1.Text.Substring(1);
+            }
+
+            while (textBox1.Text.Contains("  "))
+            {
+                textBox1.Text = textBox1.Text.Replace("  ", " ");
+            }
+
             try
             {
                 if (textBox1.Text.Split(" ").Length != 12)
@@ -114,22 +130,30 @@ namespace Booknemonic
         {
             ImportPrivate form = new ImportPrivate();
             form.Show();
-            form.Location = this.Location;
-            this.Hide();
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
 
         private void signVerifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sign form = new Sign();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
 
         private void encryptDecryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Encrypt form = new Encrypt();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
 
         }
 
@@ -170,7 +194,7 @@ namespace Booknemonic
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != null)
+            if (textBox2.Text != "")
             {
                 textBox2.SelectAll();
                 textBox2.Focus();

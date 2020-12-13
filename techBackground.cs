@@ -33,14 +33,20 @@ namespace Mnemonic_keys
         {
             Sign form = new Sign();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
 
         private void encryptDecryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Encrypt form = new Encrypt();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
 
         }
 
@@ -84,7 +90,10 @@ namespace Mnemonic_keys
         {
             OpenUrl("https://en.wikipedia.org/wiki/Elliptic-curve_cryptography");
         }
-
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenUrl("https://en.wikipedia.org/wiki/Pretty_Good_Privacy");
+        }
         private void OpenUrl(string url)
         {
             try
@@ -111,6 +120,16 @@ namespace Mnemonic_keys
                     throw;
                 }
             }
+        }
+
+        private void wordlistButton_Click(object sender, EventArgs e)
+        {
+            word_list form = new word_list();
+            form.Show();
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
     }
 }
