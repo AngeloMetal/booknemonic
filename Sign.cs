@@ -30,22 +30,35 @@ namespace Mnemonic_keys
       
         private void button1_Click(object sender, EventArgs e)
         {
-            //it gets rid of any useless spaces of the mnemonicTextbox
-            while(mnemonicTextbox.Text.Substring(mnemonicTextbox.Text.Length - 1) == " ")
+#pragma warning disable CS0642 // Possible mistaken empty statement
+            if (mnemonicTextbox.Text.Any(Char.IsLetter))
             {
-                mnemonicTextbox.Text = mnemonicTextbox.Text.Remove(mnemonicTextbox.Text.Length - 1, 1);
-            }
+                {
+                    //it gets rid of any useless spaces of the mnemonicTextbox
+                    while (mnemonicTextbox.Text.Substring(mnemonicTextbox.Text.Length - 1) == " ")
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Remove(mnemonicTextbox.Text.Length - 1, 1);
+                    }
 
-            while (mnemonicTextbox.Text.Substring(0, 1) == " ")
-            {
-                mnemonicTextbox.Text = mnemonicTextbox.Text.Substring(1);
-            }
+                    while (mnemonicTextbox.Text.Substring(0, 1) == " ")
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Substring(1);
+                    }
 
-            while(mnemonicTextbox.Text.Contains("  "))
-            {
-                mnemonicTextbox.Text = mnemonicTextbox.Text.Replace("  ", " ");
+                    while (mnemonicTextbox.Text.Contains("  "))
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Replace("  ", " ");
+                    }
+                }
             }
-            
+            else
+            {
+                mnemonicTextbox.Text = "";
+            }
+#pragma warning restore CS0642 // Possible mistaken empty statement
+
+
+
 
             try
             {
@@ -70,12 +83,37 @@ namespace Mnemonic_keys
 
         private void verifymessage_Click(object sender, EventArgs e)
         {
+            if (mnemonicTextbox.Text.Any(Char.IsLetter))
+            {
+                {
+                    //it gets rid of any useless spaces of the mnemonicTextbox
+                    while (mnemonicTextbox.Text.Substring(mnemonicTextbox.Text.Length - 1) == " ")
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Remove(mnemonicTextbox.Text.Length - 1, 1);
+                    }
+
+                    while (mnemonicTextbox.Text.Substring(0, 1) == " ")
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Substring(1);
+                    }
+
+                    while (mnemonicTextbox.Text.Contains("  "))
+                    {
+                        mnemonicTextbox.Text = mnemonicTextbox.Text.Replace("  ", " ");
+                    }
+                }
+            }
+            else
+            {
+                mnemonicTextbox.Text = "";
+            }
+
             if (mnemonicTextbox.Text.Split(" ").Length != 24)
             {
                 MessageBox.Show("Enter the 24 public words of the person that signed the message.", "Invalid public words", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-                string public_key = MnToHex(mnemonicTextbox.Text);
+            string public_key = MnToHex(mnemonicTextbox.Text);
             String strPubKey = public_key;
             var pubKey = new PubKey(strPubKey);
             var addr = pubKey.GetAddress(ScriptPubKeyType.Legacy, Network.Main);

@@ -32,14 +32,20 @@ namespace Booknemonic
         {
             Sign form = new Sign();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
         }
 
         private void encryptDecryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Encrypt form = new Encrypt();
             form.Show();
-            form.Location = this.Location;
+            form.Location = new Point(
+             this.Location.X + this.Location.X / (8 / 7),
+             this.Location.Y - this.Location.Y / 18
+            );
 
         }
 

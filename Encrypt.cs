@@ -36,20 +36,27 @@ namespace Booknemonic
         //Encrypts the message
         private void encryptbutton_Click(object sender, EventArgs e)
         {
-            //it gets rid of any useless spaces of the mnemonicbox
-            while (mnemonicbox.Text.Substring(mnemonicbox.Text.Length - 1) == " ")
+            if (mnemonicbox.Text.Any(Char.IsLetter))
             {
-                mnemonicbox.Text = mnemonicbox.Text.Remove(mnemonicbox.Text.Length - 1, 1);
-            }
+                //it gets rid of any useless spaces of the mnemonicbox
+                while (mnemonicbox.Text.Substring(mnemonicbox.Text.Length - 1) == " ")
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Remove(mnemonicbox.Text.Length - 1, 1);
+                }
 
-            while (mnemonicbox.Text.Substring(0, 1) == " ")
-            {
-                mnemonicbox.Text = mnemonicbox.Text.Substring(1);
-            }
+                while (mnemonicbox.Text.Substring(0, 1) == " ")
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Substring(1);
+                }
 
-            while (mnemonicbox.Text.Contains("  "))
+                while (mnemonicbox.Text.Contains("  "))
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Replace("  ", " ");
+                }
+            }
+            else
             {
-                mnemonicbox.Text = mnemonicbox.Text.Replace("  ", " ");
+                mnemonicbox.Text = "";
             }
 
             try
@@ -73,6 +80,29 @@ namespace Booknemonic
 
         private void decryptbutton_Click(object sender, EventArgs e)
         {
+            if (mnemonicbox.Text.Any(Char.IsLetter))
+            {
+                //it gets rid of any useless spaces of the mnemonicbox
+                while (mnemonicbox.Text.Substring(mnemonicbox.Text.Length - 1) == " ")
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Remove(mnemonicbox.Text.Length - 1, 1);
+                }
+
+                while (mnemonicbox.Text.Substring(0, 1) == " ")
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Substring(1);
+                }
+
+                while (mnemonicbox.Text.Contains("  "))
+                {
+                    mnemonicbox.Text = mnemonicbox.Text.Replace("  ", " ");
+                }
+            }
+            else
+            {
+                mnemonicbox.Text = "";
+            }
+
             try
             {
                 if (mnemonicbox.Text.Split(" ").Length != 12)

@@ -25,20 +25,27 @@ namespace Booknemonic
 
         public void ImportPrivateMnemonic()
         {
-            //it gets rid of any useless spaces of the textBox1
-            while (textBox1.Text.Substring(textBox1.Text.Length - 1) == " ")
+            if (textBox1.Text.Any(Char.IsLetter))
             {
-                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
-            }
+                //it gets rid of any useless spaces of the textBox1
+                while (textBox1.Text.Substring(textBox1.Text.Length - 1) == " ")
+                {
+                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+                }
 
-            while (textBox1.Text.Substring(0, 1) == " ")
-            {
-                textBox1.Text = textBox1.Text.Substring(1);
-            }
+                while (textBox1.Text.Substring(0, 1) == " ")
+                {
+                    textBox1.Text = textBox1.Text.Substring(1);
+                }
 
-            while (textBox1.Text.Contains("  "))
+                while (textBox1.Text.Contains("  "))
+                {
+                    textBox1.Text = textBox1.Text.Replace("  ", " ");
+                }
+            }
+            else
             {
-                textBox1.Text = textBox1.Text.Replace("  ", " ");
+                textBox1.Text = "";
             }
 
             try
@@ -124,16 +131,6 @@ namespace Booknemonic
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void importAPrivateMnemonicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ImportPrivate form = new ImportPrivate();
-            form.Show();
-            form.Location = new Point(
-             this.Location.X + this.Location.X / (8 / 7),
-             this.Location.Y - this.Location.Y / 18
-            );
         }
 
         private void signVerifyToolStripMenuItem_Click(object sender, EventArgs e)

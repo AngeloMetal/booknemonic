@@ -170,7 +170,6 @@
             this.importAPrivateMnemonicToolStripMenuItem.Name = "importAPrivateMnemonicToolStripMenuItem";
             this.importAPrivateMnemonicToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.importAPrivateMnemonicToolStripMenuItem.Text = "Import private words";
-            this.importAPrivateMnemonicToolStripMenuItem.Click += new System.EventHandler(this.importAPrivateMnemonicToolStripMenuItem_Click);
             // 
             // signDecryptToolStripMenuItem
             // 
