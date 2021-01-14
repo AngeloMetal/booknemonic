@@ -111,7 +111,7 @@ namespace Booknemonic
             this.label3.Size = new System.Drawing.Size(453, 30);
             this.label3.TabIndex = 6;
             this.label3.Text = "It is not recommended to encrypt/decrypt large data since ECC progress is very sl" +
-    "ow.\r\nConsider using symetric encryption instead. (Like AES)";
+    "ow.\r\nConsider using symmetric encryption instead. (Like AES)";
             // 
             // progressBar1
             // 
