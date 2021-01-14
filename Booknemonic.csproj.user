@@ -10,6 +10,9 @@
     <Compile Update="aboutThis.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EncryptFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="techBackground.cs">
       <SubType>Form</SubType>
     </Compile>

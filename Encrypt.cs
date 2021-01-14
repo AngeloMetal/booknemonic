@@ -18,8 +18,7 @@ using Autarkysoft.Bitcoin;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Runtime.InteropServices;
-
-
+using Mnemonic_keys;
 
 namespace Booknemonic
 {
@@ -31,6 +30,8 @@ namespace Booknemonic
         public Encrypt()
         {
             InitializeComponent();
+            toolTip1.SetToolTip(button1, "Encrypt/Decrypt a file");
+
         }
 
         //Encrypts the message
@@ -202,6 +203,22 @@ namespace Booknemonic
 
         private void mnemonicbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            EncryptFile form = new EncryptFile();
+            form.Show();
+            form.Location = new Point(
+             this.Location.X,
+             this.Location.Y
+            );
+            this.Close();
         }
     }
 }

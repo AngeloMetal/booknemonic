@@ -29,6 +29,7 @@ namespace Booknemonic
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Encrypt));
             this.messagebox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace Booknemonic
             this.encryptbutton = new System.Windows.Forms.Button();
             this.decryptbutton = new System.Windows.Forms.Button();
             this.pasteButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // messagebox
@@ -131,12 +134,23 @@ namespace Booknemonic
             this.pasteButton.UseVisualStyleBackColor = true;
             this.pasteButton.Click += new System.EventHandler(this.pasteButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(14, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 22);
+            this.button1.TabIndex = 13;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Encrypt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(670, 541);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pasteButton);
             this.Controls.Add(this.decryptbutton);
             this.Controls.Add(this.encryptbutton);
@@ -166,5 +180,7 @@ namespace Booknemonic
         private System.Windows.Forms.Button encryptbutton;
         private System.Windows.Forms.Button decryptbutton;
         private System.Windows.Forms.Button pasteButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
