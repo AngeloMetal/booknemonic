@@ -5,4 +5,4 @@ Major updates:
 14/01/2020: Added option for file encryption/decryption. (Asymmetric)
 
 Screenshots:</br>
-<img width="500" src="https://booknemonic.org/screenshot1.png"><img width="500" src="https://booknemonic.org/screenshot2.png">
+<img width="500" src="https://booknemonic.org/screenshot1.png"></br></br><img width="500" src="https://booknemonic.org/screenshot2.png">
