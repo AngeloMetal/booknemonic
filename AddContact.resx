@@ -57,20 +57,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Booknemonic uses elliptic curve cryptography to encrypt/decrypt and sign/verify messages.
-This could be done similarly with a lot of different ways like PGP.
-The problem was that before you needed to have a very long PGP key to do it. It wasn't possible
-to write down your key and share it with people at work. You had to transfer the key via computer.
-With booknemonic, you can create digital signatures without having to transfer large base64 encoded strings.
-
-I've created this to spread digital signatures and encryption to a simpler level.
-Meaning that this can be used for educational purposes too.</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>83</value>
-  </metadata>
   <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="pasteButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAd0SU1FB+QM
+        BwgHFTWpBRgAAAEySURBVDhPldJLK0VRGIfxI7fDQIqMxBDFF5AyMEAizkwMjE1kYCR3MSKXDISIEjIX
+        ZSafy/MsFmcfS21v/eqsffb+r3e/axf+qHaMYxANXshTtWjEAE6wjwssoRP1qEayWuCNe3jBCrowhGs8
+        Yhd2lQzpxh3mcIhTHMAuzrCAZWyiBr+qB0ewkyYYOIFFzGMMBtyiH3XIlAHHaAurz3n4GpdYxQZ2cI53
+        zCLTSWVAEVuwC8Ncu2svXvGEGTjYUKkA33c0rH6qAzcw5A2+Tqi8AbZtSB8cdgmh8gbEsvV1TIUV9d8A
+        /3ewmYB4jJaDc4fcAZ77PaYxAqd/9fU7VQZkXiF+ytuIZ/4MP914jOWa4b3fQ7TKb/RrdAe7WIOhkdd9
+        +AHDSFYVnMskbLOSO/NwofUDFsk4kS7kvBQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAXUgAAZgAAAICAAAABACAAKAgBAH1SAABAQAAAAQAgAChCAAClWgEAMDAAAAEA

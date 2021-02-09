@@ -22,9 +22,13 @@ namespace Mnemonic_keys
 {
     public partial class Sign : Form
     {
-        public Sign()
+        public Sign(string publicwords)
         {
             InitializeComponent();
+            if(publicwords != null)
+            {
+                mnemonicTextbox.Text = publicwords;
+            }
         }
 
       

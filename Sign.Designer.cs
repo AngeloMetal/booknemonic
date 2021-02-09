@@ -187,6 +187,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.Name = "Sign";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sign/Verify a message";
             this.ResumeLayout(false);
             this.PerformLayout();

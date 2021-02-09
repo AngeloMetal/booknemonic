@@ -135,7 +135,7 @@ namespace Booknemonic
 
         private void signVerifyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sign form = new Sign();
+            Sign form = new Sign(null);
             form.Show();
             form.Location = new Point(
              this.Location.X + this.Location.X / (8 / 7),
@@ -145,7 +145,7 @@ namespace Booknemonic
 
         private void encryptDecryptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Encrypt form = new Encrypt();
+            Encrypt form = new Encrypt(null);
             form.Show();
             form.Location = new Point(
              this.Location.X + this.Location.X / (8 / 7),

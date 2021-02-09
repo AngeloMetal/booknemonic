@@ -175,7 +175,7 @@ namespace Booknemonic
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 30);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Developer: Angelo M.\r\nThis is the v0.2 of the project.";
+            this.label4.Text = "Developer: Angelo M.\r\nThis is the v1.0 of the project.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // linkLabel2

@@ -57,19 +57,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Booknemonic uses elliptic curve cryptography to encrypt/decrypt and sign/verify messages.
-This could be done similarly with a lot of different ways like PGP.
-The problem was that before you needed to have a very long PGP key to do it. It wasn't possible
-to write down your key and share it with people at work. You had to transfer the key via computer.
-With booknemonic, you can create digital signatures without having to transfer large base64 encoded strings.
+  <data name="label2.Text" xml:space="preserve">
+    <value>Instead of just encrypting messages, Booknemonic makes it easier for you
+to save your writings and ensure that no one can read them, except you. 
 
-I've created this to spread digital signatures and encryption to a simpler level.
-Meaning that this can be used for educational purposes too.</value>
+Think it as an private diary that only you can read.</value>
   </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>83</value>
-  </metadata>
   <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

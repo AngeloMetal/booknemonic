@@ -180,6 +180,7 @@ namespace Booknemonic
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EncryptFile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Encrypt/Decrypt a file";
             this.ResumeLayout(false);
             this.PerformLayout();

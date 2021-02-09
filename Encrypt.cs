@@ -27,10 +27,15 @@ namespace Booknemonic
         [DllImport("user32")]
         private extern static int GetCaretPos(out Point p);
 
-        public Encrypt()
+        public Encrypt(string publicwords)
         {
             InitializeComponent();
             toolTip1.SetToolTip(button1, "Encrypt/Decrypt a file");
+            if(publicwords != null)
+            {
+                mnemonicbox.Text = publicwords;
+            }
+            
 
         }
 
@@ -212,7 +217,7 @@ namespace Booknemonic
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            EncryptFile form = new EncryptFile();
+            EncryptFile form = new EncryptFile(mnemonicbox.Text);
             form.Show();
             form.Location = new Point(
              this.Location.X,

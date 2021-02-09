@@ -4,6 +4,15 @@
     <_LastSelectedProfileId>C:\Users\bymet\source\repos\Booknemonic\Booknemonic\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Encrypt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="EncryptFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Messenger.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="techBackground.cs">

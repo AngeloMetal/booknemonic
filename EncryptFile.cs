@@ -24,10 +24,11 @@ namespace Booknemonic
 {
     public partial class EncryptFile : Form
     {
-        public EncryptFile()
+        public EncryptFile(string publicWords)
         {
             InitializeComponent();
             toolTip1.SetToolTip(button3, "Encrypt/Decrypt a message");
+            publicWordsBox.Text = publicWords;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -338,7 +339,7 @@ namespace Booknemonic
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Encrypt form = new Encrypt();
+            Encrypt form = new Encrypt(null);
             form.Show();
             form.Location = new Point(
              this.Location.X,
