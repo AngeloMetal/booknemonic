@@ -9,7 +9,7 @@ Screenshots:</br>
 <img width="500" src="https://booknemonic.org/screenshot1.png"></br></br><img width="500" src="https://booknemonic.org/screenshot2.png">
 
 # Building
-You can build Booknemonic using Visual Studio 2019 (with .NET 5). You'll have to firsly install these bitcoin related libraries:
+You can build Booknemonic using Visual Studio 2019 (with .NET 5). You'll have to firstly install these bitcoin related libraries:
 <ul>
   <li><a href="https://github.com/MetacoSA/NBitcoin">NBitcoin</a></li>
   <li><a href="https://github.com/Autarkysoft/Denovo">Denovo</a></li>
