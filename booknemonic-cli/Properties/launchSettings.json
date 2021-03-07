@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Booknemonic-cli": {
+      "commandName": "Project",
+      "commandLineArgs": "\"generatePair\"",
+      "remoteDebugEnabled": false
+    },
+    "newProfile1": {
+      "commandName": "Executable"
+    }
+  }
+}
