@@ -6,7 +6,7 @@ Major updates:
 14/01/2020: Added option for file encryption/decryption. (Asymmetric)
 
 Screenshots:</br>
-<img width="500" src="https://booknemonic.org/screenshot1.png"></br></br><img width="500" src="https://booknemonic.org/screenshot2.png">
+<img width="500" src="https://i.ibb.co/wJSdVBc/screenshot1.png"></br></br><img width="500" src="https://i.ibb.co/QJDjkpG/screenshot2.png">
 
 # Building
 You can build Booknemonic using Visual Studio 2019 (with .NET 5). You'll have to firstly install these bitcoin related libraries:
